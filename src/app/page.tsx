@@ -1,12 +1,13 @@
 "use client";
 
 import React, { useState, useCallback } from "react";
-import { Sparkles, Film, FileArchive, Shuffle, Monitor, Layers, FileVideo } from "lucide-react";
+import { Sparkles, Film, FileArchive, Shuffle, Monitor, Layers, FileVideo, Stamp } from "lucide-react";
 
 // Tool Components
 import { GifCreator } from "@/components/tools/GifCreator";
 import { VideoToGif } from "@/components/tools/VideoToGif";
 import { GifToVideo } from "@/components/tools/GifToVideo";
+import { MemeStudio } from "@/components/tools/MemeStudio";
 import { GifCompressor } from "@/components/tools/GifCompressor";
 import { ImageConverter } from "@/components/tools/ImageConverter";
 import { ScreenRecorder } from "@/components/tools/ScreenRecorder";
@@ -30,6 +31,7 @@ export default function Home() {
     { id: "gif-creator", name: "GIF Creator", description: "Create animated GIFs from static images", icon: Layers },
     { id: "video-to-gif", name: "Video to GIF", description: "Convert video clips to high-quality GIFs", icon: Film },
     { id: "gif-to-video", name: "GIF to Video", description: "Convert animated GIFs to MP4 or WebM video", icon: FileVideo },
+    { id: "meme-studio", name: "Meme Studio", description: "Add captions, watermarks & sticker stamps", icon: Stamp },
     { id: "gif-compressor", name: "GIF Compressor", description: "Reduce size of animated GIF files", icon: FileArchive },
     { id: "image-converter", name: "Image Converter", description: "Format and resize static images", icon: Shuffle },
     { id: "screen-recorder", name: "Screen Recorder", description: "Record display output straight to GIF", icon: Monitor },
@@ -109,6 +111,9 @@ export default function Home() {
           </div>
           <div className={`absolute inset-0 flex ${selectedTool === "gif-to-video" ? "" : "invisible pointer-events-none"}`}>
             <GifToVideo />
+          </div>
+          <div className={`absolute inset-0 flex ${selectedTool === "meme-studio" ? "" : "invisible pointer-events-none"}`}>
+            <MemeStudio />
           </div>
           <div className={`absolute inset-0 flex ${selectedTool === "gif-compressor" ? "" : "invisible pointer-events-none"}`}>
             <GifCompressor />
