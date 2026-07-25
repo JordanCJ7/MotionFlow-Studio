@@ -118,6 +118,7 @@ Open a new terminal window at the project root directory.
 │   │   │   ├── FrameEditorModal.tsx # Canvas frame rotation, text, and filters
 │   │   │   ├── VideoToGif.tsx
 │   │   │   ├── GifToVideo.tsx       # WebCodecs + MediaRecorder GIF-to-MP4/WebM converter
+│   │   │   ├── MemeStudio.tsx       # Animated Meme Generator, Logo Watermarking & Badge Stamps
 │   │   │   ├── GifCompressor.tsx
 │   │   │   ├── ImageConverter.tsx
 │   │   │   └── ScreenRecorder.tsx
