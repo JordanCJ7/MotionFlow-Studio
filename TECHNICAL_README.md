@@ -119,6 +119,7 @@ Open a new terminal window at the project root directory.
 │   │   │   ├── VideoToGif.tsx
 │   │   │   ├── GifToVideo.tsx       # WebCodecs + MediaRecorder GIF-to-MP4/WebM converter
 │   │   │   ├── MemeStudio.tsx       # Animated Meme Generator, Logo Watermarking & Badge Stamps
+│   │   │   ├── FrameExtractor.tsx   # Decomposes GIFs into frames & client-side JSZip packaging
 │   │   │   ├── GifCompressor.tsx
 │   │   │   ├── ImageConverter.tsx
 │   │   │   └── ScreenRecorder.tsx
