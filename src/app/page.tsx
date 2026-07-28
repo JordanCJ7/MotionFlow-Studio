@@ -1,13 +1,14 @@
 "use client";
 
 import React, { useState, useCallback } from "react";
-import { Sparkles, Film, FileArchive, Shuffle, Monitor, Layers, FileVideo, Stamp, FolderArchive } from "lucide-react";
+import { Sparkles, Film, FileArchive, Shuffle, Monitor, Layers, FileVideo, Stamp, FolderArchive, Wand2 } from "lucide-react";
 
 // Tool Components
 import { GifCreator } from "@/components/tools/GifCreator";
 import { VideoToGif } from "@/components/tools/VideoToGif";
 import { GifToVideo } from "@/components/tools/GifToVideo";
 import { MemeStudio } from "@/components/tools/MemeStudio";
+import { BgRemover } from "@/components/tools/BgRemover";
 import { FrameExtractor } from "@/components/tools/FrameExtractor";
 import { GifCompressor } from "@/components/tools/GifCompressor";
 import { ImageConverter } from "@/components/tools/ImageConverter";
@@ -33,6 +34,7 @@ export default function Home() {
     { id: "video-to-gif", name: "Video to GIF", description: "Convert video clips to high-quality GIFs", icon: Film },
     { id: "gif-to-video", name: "GIF to Video", description: "Convert animated GIFs to MP4 or WebM video", icon: FileVideo },
     { id: "meme-studio", name: "Meme Studio", description: "Add captions, watermarks & sticker stamps", icon: Stamp },
+    { id: "bg-remover", name: "AI Bg Remover", description: "Remove image & GIF backgrounds with AI", icon: Wand2 },
     { id: "frame-extractor", name: "Frame Extractor", description: "Decompose GIFs into frames & export ZIP", icon: FolderArchive },
     { id: "gif-compressor", name: "GIF Compressor", description: "Reduce size of animated GIF files", icon: FileArchive },
     { id: "image-converter", name: "Image Converter", description: "Format and resize static images", icon: Shuffle },
@@ -116,6 +118,9 @@ export default function Home() {
           </div>
           <div className={`absolute inset-0 flex ${selectedTool === "meme-studio" ? "" : "invisible pointer-events-none"}`}>
             <MemeStudio />
+          </div>
+          <div className={`absolute inset-0 flex ${selectedTool === "bg-remover" ? "" : "invisible pointer-events-none"}`}>
+            <BgRemover />
           </div>
           <div className={`absolute inset-0 flex ${selectedTool === "frame-extractor" ? "" : "invisible pointer-events-none"}`}>
             <FrameExtractor />

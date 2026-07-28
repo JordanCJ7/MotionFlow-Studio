@@ -10,6 +10,7 @@
     "tauri": "tauri"
   },
   "dependencies": {
+    "@imgly/background-removal": "^1.7.0",
     "@types/jszip": "^3.4.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.2.10",
